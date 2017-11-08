@@ -1,0 +1,23 @@
+/// Uva - Ecological Premium
+
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    long long p,q,r,t,number,output;
+    while(scanf("%lld",&t)==1)
+    {
+        for(i=0;i<t;i++)
+        {
+            output=0;
+            scanf("%lld",&number);
+            for(j=0;j<number;j++)
+            {
+                scanf("%lld%lld%lld",&p,&q,&r);
+                output+=p*r;
+            }
+            printf("%lld\n",output);
+        }
+    }
+    return 0;
+}

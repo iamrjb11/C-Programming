@@ -1,0 +1,513 @@
+/* Overlay */
+
+#fo-ovrly {
+    /* transparency for different browsers */
+    filter: alpha(opacity=10);
+    -moz-opacity: 0.1;
+    -khtml-opacity: 0.1;
+    opacity: 0.1;
+    background: lightgray;
+
+    /* make sure it appear behind the dialog box but above everything else */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4000;
+}
+
+/* Ribbon */
+
+#fo-wd {
+    direction: ltr;
+    position: absolute;
+    height: auto;
+    max-height: 490px;
+    width: 501px;
+    max-width: 515px;
+    border-radius: 3px;
+    border: 1px solid rgb(202, 202, 202);
+    background-color: ivory;
+    z-index: 9999999999999;
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+    transition: opacity 0.5s linear;
+    opacity: 1;
+    -webkit-font-smoothing: initial;
+}
+
+#fo-wd.active {
+    opacity: 1;
+}
+
+#fo-wd.inactive {
+    opacity: 0;
+}
+
+.fo-wd-t {
+    padding-top: 5px;
+    overflow: visible;
+    border: none;
+    background-repeat: no-repeat;
+    font-family: Open Sans, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    width: 480px;
+    float: left;
+    color: #807E7E;
+    z-index: 9999999999999993;
+}
+
+#fo-wd-h {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    border: none;
+    text-align: left;
+    background-repeat: no-repeat;
+    font-family: Open Sans, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    width: 250px;
+    float: left;
+    color: #807E7E;
+}
+
+.fowdbtn {
+    padding: 15px 5px 8px 0px;
+    overflow: hidden;
+    border: none;
+    text-align: center;
+    background-repeat: no-repeat;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    width: 179px;
+    float: right;
+    color: #807E7E;
+}
+
+/*.btn-default {*/
+/*color: #807E7E !important;*/
+/*padding: 0px 0px 0px 3px !important;*/
+/*background-color: initial !important;*/
+/*font-size: 14px !important;*/
+/*opacity: 0.6 !important;*/
+/*cursor: pointer !important;*/
+/*width: 20px !important;*/
+/*float: right !important;*/
+/*}*/
+
+.fo-ul {
+    padding: 0px;
+    width: 100%;
+    max-width: 513px;
+    margin: 0px;
+    float: right;
+    z-index: 99999999;
+    height: 415px;
+    font-size: 14px;
+    overflow-y: scroll;
+    text-align: left;
+}
+
+.fo-li {
+    width: 120px;
+    height: 130px;
+    background-color: #E5E5E5;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* Firefox 3.6+ */
+    background-image: -moz-radial-gradient(circle, gray 0%, #E5E5E5 100%);
+    /* Safari 4-5, Chrome 1-9 */
+    background-image: -webkit-radial-gradient(center center, circle cover, gray 0%, #E5E5E5 100%);
+    background-image: -o-radial-gradient(center center, circle cover, gray 0%, #E5E5E5 100%);
+    background-image: -ms-radial-gradient(center center, circle cover, gray 0%, #E5E5E5 100%);
+    /*background-image: radial-gradient(center center, circle cover, gray 0%, #E5E5E5 100%);*/
+    float: left;
+    font-weight: bold;
+    font-family: helvetica;
+    font-size: 15px;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: left;
+    z-index: 99999999;
+    margin: 0;
+    border-bottom: gray 3px solid;
+}
+
+.fo-pt {
+    display: inline-block;
+    background-color: gray;
+    width: 117px;
+    height: 18px;
+    font-family: Open Sans, sans-serif;
+    z-index: 99999999;
+    float: left;
+    padding: 2px 0px 2px 3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 20px;
+    color: white;
+}
+
+.fo-pr {
+    display: inline-block;
+    background-color: gray;
+    width: 117px;
+    height: 20px;
+    font-family: Open Sans, sans-serif;
+    z-index: 99999999;
+    float: left;
+    padding: 0px 0px 2px 3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 20px;
+}
+
+.fo-mr {
+    display: inline-block;
+    background-color: gray;
+    width: 117px;
+    height: 27px;
+    font-family: Open Sans, sans-serif;
+    z-index: 99999999;
+    float: left;
+    padding: 0px 0px 2px 3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    color: white;
+}
+
+.fo-pc {
+    float: left;
+    width: 120px;
+    height: 205px;
+    margin: 1px 0px 1px 0px;
+    border: transparent solid 0px;
+    cursor: pointer;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    color: greenyellow;
+    z-index: 99999999;
+    background-color: gray;
+}
+
+.fo-pc:hover {
+    color: white;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    z-index: 99999999;
+
+}
+
+.fo-pc:hover .fo-ic {
+    -webkit-box-shadow: 0 5px 10px #777;
+    -moz-box-shadow: 0 5px 10px #777;
+    box-shadow: 0 5px 10px #777;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    z-index: 99999999;
+}
+
+.fo-pc:hover .fo-li {
+    -webkit-box-shadow: 0 5px 10px #777;
+    -moz-box-shadow: 0 5px 10px #777;
+    box-shadow: 0 5px 10px #777;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+    z-index: 99999999;
+}
+
+.fo-pc:hover .fo-mr {
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    z-index: 99999999;
+}
+
+.fo-pc:hover .fo-pt {
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    z-index: 99999999;
+}
+
+.fo-pc:hover .fo-pr {
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    z-index: 99999999;
+}
+
+.fo-ic {
+    height: 100px;
+    width: 100px;
+    margin-top: 4px;
+    margin-left: 10px;
+    z-index: 99999999;
+}
+
+.foribbon {
+    font-size: 13px !important;
+    width: 118px;
+    position: relative;
+    background: black;
+    color: #fff;
+    text-align: center;
+    padding: 2px 0px 2px 2px;
+    color: yellow;
+    margin: 0;
+    z-index: 999999;
+    height: 17px;
+    opacity: 0.7;
+}
+
+.view {
+    overflow: hidden;
+    text-align: center;
+}
+
+.view-first:hover .fo-mask {
+    -ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity = 100)';
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.view-first .fo-mask {
+    -ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity = 0)';
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.02s ease-in-out;
+    -moz-transition: all 0.02s ease-in-out;
+    -o-transition: all 0.02s ease-in-out;
+    -ms-transition: all 0.02s ease-in-out;
+    transition: all 0.02s ease-in-out;
+}
+
+.view .fo-mask {
+    width: 120px;
+    height: 109px;
+    position: relative;
+    overflow: hidden;
+    z-index: 999999;
+    float: left;
+    top: -104px;
+}
+
+.view .info {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 8px;
+    background: #000;
+    color: #fff;
+    top: 38px;
+    position: relative;
+    left: 11px;
+}
+
+/* Display Window */
+
+.fo-display-window .fo-tools-btn {
+    float: right;
+    font-size: 17px;
+    border-left: 1px solid rgba(224, 225, 226, 1);
+    width: 38px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    color: rgba(165, 167, 172, 1);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.fo-display-window .fo-tools-btn i {
+    margin-top: 8px;
+}
+
+.fo-display-window .fo-tools-btn:hover {
+    color: rgba(57, 156, 222, 1);
+}
+
+.fo-display-window .fo-suspend.fo-tools-btn > i {
+    /*pointer-events: none;*/
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip {
+    background: rgba(39, 34, 44, 0.85);
+    color: #fff;
+    display: block;
+    margin-bottom: 15px;
+    opacity: 0;
+    padding: 10px;
+    pointer-events: none;
+    cursor: default;
+    position: relative;
+    margin-top: 0px;
+    margin-left: -119px;
+    width: 163px;
+    min-width: 163px;
+    height: 99px;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 400000000;
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px);
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 183px;
+    height: 134px;
+    z-index: 0;
+    background: none;
+    content: "";
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip:after {
+    border-left: solid transparent 10px;
+    border-right: solid transparent 10px;
+    border-bottom: solid rgba(39, 34, 44, 0.85) 10px;
+    bottom: 119px;
+    content: " ";
+    height: 0;
+    left: 77%;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip.shown {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-tooltip-inner {
+    display: block;
+    width: auto;
+    height: auto;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    background: none;
+    color: #fff;
+    font-size: 13px;
+    line-height: 18px;
+    /*font-family: Arial;*/
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-option {
+    float: left;
+    clear: left;
+    display: flex;
+    color: #ffffff;
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-option input {
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    appearance: radio;
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-more a {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding-top: 2px;
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-more {
+    float: left;
+    clear: left;
+    width: 100%;
+    margin-top: 3px;
+
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-more a:hover {
+    text-decoration: underline;
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-btns {
+    float: right;
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-tooltip-btn {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-tooltip-btn i {
+    margin-top: 4px;
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-ok-button {
+    background: rgba(52, 207, 149, 1);
+    border: 1px solid rgba(53, 151, 115, 1);
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-ok-button:hover {
+    background: rgba(52, 207, 149, 0.8);
+    border: 1px solid rgba(53, 151, 115, 0.8);
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-close-button {
+    background: rgba(238, 95, 69, 1);
+    border: 1px solid rgba(211, 83, 61, 1);
+}
+
+.fo-display-window .fo-suspend .fo-suspend-tooltip .fo-suspend-close-button:hover {
+    background: rgba(238, 95, 69, 0.8);
+    border: 1px solid rgba(211, 83, 61, 0.8);
+}
+
+/* Attribution */
+.fo-display-window .fo-attribution-footer {
+    color: rgba(92, 87, 97, 0.6);
+    font-size: 11px;
+    font-family: Arial,sans-serif;
+    text-align: right;
+    padding-top: 5px;
+    margin: 5px 0px 7px 5px;
+}
+
+.fo-display-window .fo-attribution-footer a {
+    color: rgba(92, 87, 97, 0.6);
+    text-decoration: none;
+}
+
+.fo-display-window .fo-attribution-footer a:hover {
+    color: rgba(92, 87, 97, 1);
+    text-decoration: none;
+}

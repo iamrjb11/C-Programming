@@ -1,0 +1,42 @@
+                            ///* Diamond
+#include<stdio.h>
+int main()
+{
+    int i,j,k,m,n;
+    printf("Enter the diamond length:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=i;j<=n;j++)
+        {
+            printf("*");
+        }
+        for(k=1;k<=(2*i-3);k++)
+        {
+            printf(" ");
+        }
+        for(m=2;m<=(n-k+i);m++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    for(i=n;i>=2;i--)
+    {
+        for(j=0;j<=(n-i+1);j++)
+        {
+            printf("*");
+        }
+        for(k=1;k<=2*i-5;k++)
+        {
+            printf(" ");
+        }
+        for(m=1;m<=j-(k%2);m++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+}

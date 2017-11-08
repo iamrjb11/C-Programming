@@ -1,0 +1,21 @@
+/// Uva - Peter's Smokes
+
+#include<stdio.h>
+int main()
+{
+    int n,k,c,x,pt,r;
+    while(scanf("%d%d",&n,&k)!=EOF)
+    {
+        c=n;
+        pt=0;
+        while(c>=k)
+        {
+            x=c/k;
+            r=c%k;
+            c=x+r;
+            pt=pt+x;
+        }
+        printf("%d\n",n+pt);
+    }
+    return 0;
+}

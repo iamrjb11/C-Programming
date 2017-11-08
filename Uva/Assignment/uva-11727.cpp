@@ -1,0 +1,22 @@
+/// Uva - Cost Cutting
+
+#include<stdio.h>
+int main()
+{
+    int x,y,z,num,output,r;
+    while(scanf("%d",&num)==1)
+    {
+        for(r=1;r<=num;r++)
+        {
+        scanf("%d%d%d",&x,&y,&z);
+        if(x>y&&y>z||x<y && y<z)
+        output=y;
+        if(x>z&&z>y||x<z && z<y)
+        output=z;
+        if(y>x&&x>z||y<x&&x<z)
+        output=x;
+        printf("Case %d: %d\n",r,output);
+        }
+    }
+    return 0;
+}
