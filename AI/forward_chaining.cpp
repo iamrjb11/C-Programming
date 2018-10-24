@@ -9,7 +9,7 @@ int main()
     cin>>n;
     string eq[n];
     char eq_true[n];
-    int eq_mat[n],true_index=0;
+    int eq_mat[n],true_index=0,out_sts;
     for(int i=0;i<n;i++){
         cin>>eq[i];
     }
@@ -36,7 +36,13 @@ int main()
         for(int i=0;i<n;i++){
             if(eq_mat[i]==0){
                 index=i;
+                c=1;
             }
+
+        }
+        if(c==0){
+            out_sts=0;
+            break;
         }
         ///equation matrix value updated
         eq_mat[index]=11;
@@ -56,7 +62,10 @@ int main()
             true_index++;
         }
         ///Target value pele loop break
-        if(point==tar) break;
+        if(point==tar){
+            out_sts=1;
+            break;
+        }
 
         for(int i=0;i<n;i++){
             len = eq[i].length();
@@ -87,6 +96,8 @@ int main()
     for(int i=0;i<true_index;i++){
         cout<<(i+1)<<" : "<<eq_true[i]<<endl;
     }
+    if(out_sts==1) cout<<"\nFOUND"<<endl;
+    else cout<<"\nNOT FOUND"<<endl;
 
     //cout<<"-> "<<eq[0][0]<<endl;
 }

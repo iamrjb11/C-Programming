@@ -1,93 +1,162 @@
-
 #include <bits/stdc++.h>
 
 using namespace std;
+int n,len;
+int check_index[10],c_in=0;
+char eq_true[10];
+string eq[10];
+char tar;
+
+int check(int sz){
+
+    //cout<<"sz : "<<sz<<"  c_in : "<<c_in<<endl;
+    cout<<"Have\nEquation_TRUE"<<endl;
+    for(int k=0;k<sz;k++){
+        cout<<eq_true[k]<<"  ";
+
+    }
+    cout<<"\nCheck_Index "<<endl;
+    for(int k=0;k<c_in;k++){
+        cout<<check_index[k]<<"  ";
+
+    }
+    cout<<endl;
+    int check=0,r=0,pbl=0;
+    for(;;){
+        for(int i=0;i<n;i++){
+            pbl=0;
+            for(int j=0;j<c_in;j++){
+                if(check_index[j]==i){
+                    pbl=1;
+                }
+            }
+            if(pbl==0){
+                len = eq[i].length();
+                for(int j=0;j<len-2;j++){
+                    check=0;
+                    for(int k=0;k<sz;k++){
+                        if(eq[i][j]==eq_true[k]){
+                            check=1;
+                            break;
+                        }
+                    }
+                    if(check==0) break;
+                }
+                if(check==1){
+                    r=1;
+                    eq_true[sz]=eq[i][len-1];
+                    sz++;
+                    check_index[c_in]=i;
+                    c_in++;
+
+                }
+                cout<<i<<". Equation_True Matrix : ";
+                for(int k=0;k<sz;k++){
+                    cout<<eq_true[k]<<"  ";
+
+                }
+                cout<<"\tCheck_Index : ";
+                for(int k=0;k<c_in;k++){
+                    cout<<check_index[k]<<"  ";
+
+                }
+                cout<<endl;
+
+            }
+        }
+        cout<<endl;
+        if(r==0) break;
+        int br=0;
+        for(int k=0;k<sz;k++){
+            if(eq_true[k]==tar){
+                br=1;
+                break;
+            }
+
+        }
+        if(br==1) break;
+    }
+    cout<<"r : "<<r<<endl;
+return r;
+
+}
 
 int main()
 {
-    int n;
+
     cout<<"Enter KB size : ";
     cin>>n;
-    string eq[n];
-    char eq_true[n];
-    int eq_mat[n],true_index=0;
-    for(int i=0;i<n;i++){
+
+
+    int eq_mat[n],index=0,len,true_index=0;
+    for(int i=0; i<n; i++)
+    {
         cin>>eq[i];
     }
     cout<<"Target : ";
-    char tar;
-    cin>>tar;
 
+    cin>>tar;
+    char temp_tar=tar;
     for(int i=0;i<n;i++){
         //cout<<eq[i]<<endl;
         int len = eq[i].length();
         //cout<<len<<endl;
         if(len==3) eq_mat[i]=1;
         else if(len>3) eq_mat[i]=2;
-        else eq_mat[i]=0;
+        else{
+            eq_mat[i]=0;
+            check_index[c_in]=i;
+            c_in++;
+        }
     }
-    /*cout<<"Mat"<<endl;
-    for(int i=0;i<n;i++){
-        cout<<eq_mat[i]<<"  ";
-    }
-    */
-    for(int k=0;;k++){
-        int index,c=0;
-        //cout<<"IN"<<endl;
-        for(int i=0;i<n;i++){
-            if(eq_mat[i]==0){
-                index=i;
-            }
-        }
-        ///equation matrix value updated
-        eq_mat[index]=11;
-        //cout<<"index : "<<index;
-        int len = eq[index].length();
-        char point = eq[index][len-1]; ///right side value P^Q=>L eikhane L value bujano hoyese
-        //cout<<"   point : "<<point<<endl;
-        int check=0;
-        for(int i=0;i<true_index;i++){ /// check korsi je age ei point ta insert kora hoyese ki nahh
-            if(point==eq_true[i]){
-                check=1;
-                break;
-            }
-        }
-        if(check==0){
-            eq_true[true_index]=point;
-            true_index++;
-        }
-        ///Target value pele loop break
-        if(point==tar) break;
-
-        for(int i=0;i<n;i++){
+    int p=0;
+    for(int k=0;k<5;k++)
+    {
+        for(int i=0; i<n; i++)
+        {
             len = eq[i].length();
-            for(int j=0;j<(len-2);j++){
-
-                if(point == eq[i][j]){
-                    for(int k=0;k<n;k++){
-                        int temp = eq[k].length();
-                        if(eq[k][temp-1] == eq[i][len-1]){
-                            if(eq_mat[k]!=0) eq_mat[k]=eq_mat[k]-1;
-                        }
+            if(temp_tar==eq[i][len-1])
+            {
+                index=i;
+                len = eq[index].length();
+                if(temp_tar==eq[index][len-1])
+                {
+                    cout<<temp_tar<<" -> ";
+                    for(int j=len-2; j>=0; j--)
+                    {
+                        cout<<eq[index][j]<<"  ";
                     }
-                    break;
+                    for(int j=len-2; j>=0; j--)
+                    {
+                        for(int s=0;s<n;s++){
+                            int temp_l=eq[s].length();
+                            if(eq[index][j]==eq[s][temp_l-1]){
+                                if(eq_mat[s]==0){
+                                    eq_true[true_index]=eq[index][j];
+                                    cout<<"-> "<<eq_true[true_index]<<endl;
+                                    true_index++;
+                                    p=check(true_index);
+                                    cout<<"p - "<<p<<endl;
+                                    if(p==1) break;
+                                }
+                            }
+                        }
+                        cout<<"p - "<<p<<endl;
+                    if(p==1) break;
+                    }
+                    cout<<"p - "<<p<<endl;
+                    if(p==1) break;
+                    cout<<endl;
+
                 }
+
             }
-        }
 
-        /*cout<<"Mat"<<endl;
-        for(int i=0;i<n;i++){
-            cout<<eq_mat[i]<<"  ";
         }
-        cout<<endl;
-        */
+        if(p==1) break;
+        temp_tar=eq[index][0];
+
 
 
     }
-    cout<<"Output : "<<endl;
-    for(int i=0;i<true_index;i++){
-        cout<<(i+1)<<" : "<<eq_true[i]<<endl;
-    }
-
-    //cout<<"-> "<<eq[0][0]<<endl;
 }
