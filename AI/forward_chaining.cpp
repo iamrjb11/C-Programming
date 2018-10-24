@@ -8,8 +8,8 @@ int main()
     cout<<"Enter KB size : ";
     cin>>n;
     string eq[n];
-    string eq_true[n];
-    int eq_mat[n];
+    char eq_true[n];
+    int eq_mat[n],true_index=0;
     for(int i=0;i<n;i++){
         cin>>eq[i];
     }
@@ -30,7 +30,7 @@ int main()
         cout<<eq_mat[i]<<"  ";
     }
 
-    for(int k=0;k<11;k++){
+    for(int k=0;;k++){
         int index,c=0;
         //cout<<"IN"<<endl;
         for(int i=0;i<n;i++){
@@ -39,10 +39,21 @@ int main()
             }
         }
         eq_mat[index]=11;
-        cout<<"index : "<<index;
+        //cout<<"index : "<<index;
         int len = eq[index].length();
         char point = eq[index][len-1];
-        cout<<"   point : "<<point<<endl;
+        //cout<<"   point : "<<point<<endl;
+        int check=0;
+        for(int i=0;i<true_index;i++){
+            if(point==eq_true[i]){
+                check=1;
+                break;
+            }
+        }
+        if(check==0){
+            eq_true[true_index]=point;
+            true_index++;
+        }
         if(point==tar) break;
         for(int i=0;i<n;i++){
             len = eq[i].length();
@@ -66,6 +77,11 @@ int main()
             cout<<eq_mat[i]<<"  ";
         }
         cout<<endl;
+
+
+    }
+    for(int i=0;i<true_index;i++){
+        cout<<eq_true[i]<<endl;
     }
 
     //cout<<"-> "<<eq[0][0]<<endl;
