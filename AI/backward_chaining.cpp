@@ -1,17 +1,17 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-int n,len;
+int n,len,true_index=0;
 int check_index[10],c_in=0;
 char eq_true[10];
 string eq[10];
 char tar;
 
-int check(int sz){
+int check(){
 
-    //cout<<"sz : "<<sz<<"  c_in : "<<c_in<<endl;
+    /*cout<<"sz : "<<sz<<"  c_in : "<<c_in<<endl;
     cout<<"Have\nEquation_TRUE"<<endl;
-    for(int k=0;k<sz;k++){
+    for(int k=0;k<true_index;k++){
         cout<<eq_true[k]<<"  ";
 
     }
@@ -20,9 +20,10 @@ int check(int sz){
         cout<<check_index[k]<<"  ";
 
     }
-    cout<<endl;
+    cout<<endl;*/
     int check=0,r=0,pbl=0;
     for(;;){
+        r=0;
         for(int i=0;i<n;i++){
             pbl=0;
             for(int j=0;j<c_in;j++){
@@ -34,7 +35,7 @@ int check(int sz){
                 len = eq[i].length();
                 for(int j=0;j<len-2;j++){
                     check=0;
-                    for(int k=0;k<sz;k++){
+                    for(int k=0;k<true_index;k++){
                         if(eq[i][j]==eq_true[k]){
                             check=1;
                             break;
@@ -44,14 +45,15 @@ int check(int sz){
                 }
                 if(check==1){
                     r=1;
-                    eq_true[sz]=eq[i][len-1];
-                    sz++;
+                    eq_true[true_index]=eq[i][len-1];
+                    true_index++;
                     check_index[c_in]=i;
                     c_in++;
 
+
                 }
-                cout<<i<<". Equation_True Matrix : ";
-                for(int k=0;k<sz;k++){
+                /*cout<<i<<". Equation_True Matrix : ";
+                for(int k=0;k<true_index;k++){
                     cout<<eq_true[k]<<"  ";
 
                 }
@@ -60,14 +62,15 @@ int check(int sz){
                     cout<<check_index[k]<<"  ";
 
                 }
-                cout<<endl;
+                cout<<endl;*/
+                if(check==1) break;
 
             }
         }
-        cout<<endl;
+        //cout<<endl;
         if(r==0) break;
         int br=0;
-        for(int k=0;k<sz;k++){
+        for(int k=0;k<true_index;k++){
             if(eq_true[k]==tar){
                 br=1;
                 break;
@@ -76,7 +79,7 @@ int check(int sz){
         }
         if(br==1) break;
     }
-    cout<<"r : "<<r<<endl;
+    //cout<<"r : "<<r<<endl;
 return r;
 
 }
@@ -84,11 +87,10 @@ return r;
 int main()
 {
 
-    cout<<"Enter KB size : ";
+    cout<<"Enter Knowledge Base size : ";
     cin>>n;
-
-
-    int eq_mat[n],index=0,len,true_index=0;
+    int eq_mat[n],index=0,len;
+    cout<<"Knowledge Base : \n";
     for(int i=0; i<n; i++)
     {
         cin>>eq[i];
@@ -96,6 +98,7 @@ int main()
     cout<<"Target : ";
 
     cin>>tar;
+    cout<<"\nBackward Chaining Process : \n";
     char temp_tar=tar;
     for(int i=0;i<n;i++){
         //cout<<eq[i]<<endl;
@@ -110,7 +113,7 @@ int main()
         }
     }
     int p=0;
-    for(int k=0;k<5;k++)
+    for(int k=0;k<n;k++)
     {
         for(int i=0; i<n; i++)
         {
@@ -121,7 +124,7 @@ int main()
                 len = eq[index].length();
                 if(temp_tar==eq[index][len-1])
                 {
-                    cout<<temp_tar<<" -> ";
+                    cout<<temp_tar<<" ->";
                     for(int j=len-2; j>=0; j--)
                     {
                         cout<<eq[index][j]<<"  ";
@@ -133,18 +136,18 @@ int main()
                             if(eq[index][j]==eq[s][temp_l-1]){
                                 if(eq_mat[s]==0){
                                     eq_true[true_index]=eq[index][j];
-                                    cout<<"-> "<<eq_true[true_index]<<endl;
+                                    //cout<<"-> "<<eq_true[true_index]<<endl;
                                     true_index++;
-                                    p=check(true_index);
-                                    cout<<"p - "<<p<<endl;
+                                    p=check();
+                                    //cout<<"p - "<<p<<endl;
                                     if(p==1) break;
                                 }
                             }
                         }
-                        cout<<"p - "<<p<<endl;
+                        //cout<<"p - "<<p<<endl;
                     if(p==1) break;
                     }
-                    cout<<"p - "<<p<<endl;
+                    //cout<<"p - "<<p<<endl;
                     if(p==1) break;
                     cout<<endl;
 
@@ -159,4 +162,12 @@ int main()
 
 
     }
+    cout<<"\n\nOutput : \n";
+    int k=0;
+    for(k=0;k<true_index;k++){
+        cout<<(k+1)<<". "<<eq_true[k]<<endl;
+
+    }
+    if(eq_true[k-1]==tar) cout<<"FOUND\n";
+    else cout<<"NOT FOUND\n";
 }

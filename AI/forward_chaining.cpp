@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int n;
-    cout<<"Enter KB size : ";
+    cout<<"Enter Knowledge Base size : ";
     cin>>n;
     string eq[n];
     char eq_true[n];
@@ -92,7 +92,7 @@ int main()
 
 
     }
-    cout<<"Output : "<<endl;
+    cout<<"\nOutput : "<<endl;
     for(int i=0;i<true_index;i++){
         cout<<(i+1)<<" : "<<eq_true[i]<<endl;
     }
