@@ -1,0 +1,9 @@
+7
+P-Q
+LM-P
+BL-M
+AP-L
+AB-L
+A
+B
+Q
