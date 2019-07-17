@@ -2,6 +2,7 @@
 int main()
 {
     int ara[100],i,j,k,n,temp;
+    printf("Enter number of data : ");
     while(scanf("%d",&n)!=EOF)
     {
         for(i=0;i<n;i++)
@@ -27,5 +28,6 @@ int main()
             }
             printf("\n");
         }
+        printf("Enter number of data : \n");
     }
 }

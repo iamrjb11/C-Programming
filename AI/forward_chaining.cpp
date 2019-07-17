@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int n;
-    cout<<"Enter Knowledge Base size : ";
+    cout<<"KB size : ";
     cin>>n;
     string eq[n];
     char eq_true[n];
@@ -93,9 +93,9 @@ int main()
 
     }
     cout<<"\nOutput : "<<endl;
-    for(int i=0;i<true_index;i++){
+    /*for(int i=0;i<true_index;i++){
         cout<<(i+1)<<" : "<<eq_true[i]<<endl;
-    }
+    }*/
     if(out_sts==1) cout<<"\nFOUND"<<endl;
     else cout<<"\nNOT FOUND"<<endl;
 

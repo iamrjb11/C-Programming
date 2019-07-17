@@ -2,6 +2,7 @@
 int main()
 {
     int n,i,j,n2,n3,rm,rm2;
+    printf("--- Decimal to Binary Conversion ---\nEnter : ");
     while(scanf("%d",&n)!=EOF)
     {
         n2=0,n3=0;
@@ -20,6 +21,6 @@ int main()
             n3=n3*10+rm2;
             if(n2==0) break;
         }
-        printf("Real %d\n",n3);
+        printf("Real %d\n\nEnter : ",n3);
     }
 }

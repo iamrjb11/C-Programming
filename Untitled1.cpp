@@ -10,6 +10,7 @@ int main()
             temp=a;
             a=b;
             b=temp;
+            
         }
         check=a-b;
         if(check<=50) ans=a-b;
