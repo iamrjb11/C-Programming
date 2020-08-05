@@ -1,11 +1,11 @@
 /**
-@author : RK Rajib Khan
+@author : RK Rajib Khan cool
 **/
 /* Power
 input : 2 3
-output : 8 
+output : 8
 input : 3 3
-output : 27 
+output : 27
 logic :
 */
 #include<stdio.h>
@@ -32,6 +32,6 @@ int main()
         printf("\nPower r and n : ");
 
     }
-    
+
     return 0;
 }
