@@ -21,7 +21,10 @@ int main()
 
             for(j=3;j<=sqrt(i);j=j+2)
             {
-                if(i%j==0) check=0;
+                if(i%j==0){
+                    check=0;
+                    break;
+                }
             }
         }
         if(check==1) printf("%d ",i);
